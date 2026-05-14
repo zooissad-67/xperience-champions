@@ -39,7 +39,7 @@ Contenido dividido en misiones temáticas activables periódicamente:
 - [x] Proyecto Next.js creado
 - [x] Repositorio en GitHub
 - [x] Supabase configurado
-- [ ] Autenticación implementada
+- [x] Autenticación implementada
 - [ ] Misiones y preguntas
 - [ ] Rankings
 - [ ] Panel de administrador
