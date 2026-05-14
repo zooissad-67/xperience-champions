@@ -38,7 +38,7 @@ Contenido dividido en misiones temáticas activables periódicamente:
 ## Estado del proyecto
 - [x] Proyecto Next.js creado
 - [x] Repositorio en GitHub
-- [ ] Supabase configurado
+- [x] Supabase configurado
 - [ ] Autenticación implementada
 - [ ] Misiones y preguntas
 - [ ] Rankings
