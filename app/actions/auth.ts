@@ -43,6 +43,13 @@ export async function register(formData: FormData) {
 
   const supabase = await createClient()
 
+  const { data: authData, error: signUpError } = await supabase.auth.signUp({ email, password })
+
+  if (signUpError || !authData.user) {
+    return { error: signUpError?.message ?? 'Error al crear la cuenta' }
+  }
+
+  // Validate store exists (now authenticated, RLS allows the query)
   const { data: store } = await supabase
     .from('stores')
     .select('id')
@@ -51,12 +58,6 @@ export async function register(formData: FormData) {
 
   if (!store) {
     return { error: 'ID de tienda no válido. Pídelo a tu responsable.' }
-  }
-
-  const { data: authData, error: signUpError } = await supabase.auth.signUp({ email, password })
-
-  if (signUpError || !authData.user) {
-    return { error: signUpError?.message ?? 'Error al crear la cuenta' }
   }
 
   const { error: insertError } = await supabase.from('users').insert({
