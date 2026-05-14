@@ -49,17 +49,6 @@ export async function register(formData: FormData) {
     return { error: signUpError?.message ?? 'Error al crear la cuenta' }
   }
 
-  // Validate store exists (now authenticated, RLS allows the query)
-  const { data: store } = await supabase
-    .from('stores')
-    .select('id')
-    .eq('id', storeId)
-    .single()
-
-  if (!store) {
-    return { error: 'ID de tienda no válido. Pídelo a tu responsable.' }
-  }
-
   const { error: insertError } = await supabase.from('users').insert({
     id: authData.user.id,
     email,
@@ -69,6 +58,9 @@ export async function register(formData: FormData) {
   })
 
   if (insertError) {
+    if (insertError.code === '23503') {
+      return { error: 'ID de tienda no válido. Pídelo a tu responsable.' }
+    }
     return { error: 'Error al guardar el perfil. Contacta con soporte.' }
   }
 
