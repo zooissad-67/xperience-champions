@@ -27,7 +27,7 @@ export async function login(formData: FormData) {
     return { error: 'Usuario no encontrado en el sistema' }
   }
 
-  if (userData.store_id !== storeId) {
+  if (userData.role !== 'admin' && userData.store_id !== storeId) {
     await supabase.auth.signOut()
     return { error: 'ID de tienda incorrecto' }
   }
