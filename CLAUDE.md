@@ -42,8 +42,8 @@ Contenido dividido en misiones temáticas activables periódicamente:
 - [x] Autenticación implementada
 - [ ] Misiones y preguntas
 - [ ] Rankings
-- [ ] Panel de administrador
-- [ ] Panel de responsable de tienda
+- [x] Panel de administrador
+- [x] Panel de responsable de tienda
 - [ ] Deploy en Vercel
 
 ## Idioma
