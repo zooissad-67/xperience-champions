@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${mmHeadline.variable} ${notoSans.variable} h-full`}>
-      <body className="min-h-full flex flex-col antialiased">{children}</body>
+      <body className={`${notoSans.className} min-h-full flex flex-col antialiased`}>{children}</body>
     </html>
   );
 }
