@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { register } from '@/app/actions/auth'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function RegisterPage() {
   const [error, setError] = useState<string | null>(null)
@@ -23,47 +24,47 @@ export default function RegisterPage() {
   return (
     <div className="min-h-screen flex">
 
-      {/* Left panel — brand */}
+      {/* Panel izquierdo — marca */}
       <div className="hidden lg:flex lg:w-5/12 bg-black flex-col justify-between p-10">
-        <div>
-          <svg width="64" height="64" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="22" cy="20" rx="22" ry="20" fill="#CC0000" />
-            <polygon points="14,38 22,30 30,38" fill="#CC0000" />
-            <text x="22" y="26" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold" fontFamily="Arial, sans-serif" letterSpacing="1">XC</text>
-          </svg>
+        <div className="bg-white rounded-xl p-6 w-fit">
+          <Image
+            src="/logo-xc.svg"
+            alt="Xperience Champion"
+            width={180}
+            height={182}
+            priority
+          />
         </div>
 
         <div>
-          <div className="w-10 h-1 bg-red-600 mb-6" />
-          <h1 className="font-headline text-white text-5xl uppercase leading-none mb-4">
+          <div className="w-10 h-1 bg-red-600 mb-5" />
+          <p className="font-headline text-white text-4xl uppercase leading-tight">
             Únete al<br />programa
-          </h1>
-          <p className="text-gray-400 text-sm leading-relaxed max-w-xs mt-4">
-            Regístrate para acceder a las misiones de formación Xperience Champions y demostrar tu nivel.
+          </p>
+          <p className="text-gray-500 text-sm mt-4 leading-relaxed max-w-xs">
+            Regístrate para acceder a las misiones de formación y demostrar tu nivel como Xperience Champion.
           </p>
         </div>
 
-        <div className="flex items-center gap-1.5">
-          <span className="text-white font-bold text-sm tracking-tight">Media</span>
-          <span className="text-red-600 font-bold text-sm">Markt</span>
-          <span className="text-gray-600 text-sm mx-1">|</span>
-          <span className="text-gray-400 font-bold text-sm tracking-tight">SATURN</span>
-        </div>
+        <Image
+          src="/logo-mediamarkt-saturn.svg"
+          alt="MediaMarkt Saturn"
+          width={180}
+          height={36}
+          className="opacity-50"
+        />
       </div>
 
-      {/* Right panel — form */}
+      {/* Panel derecho — formulario */}
       <div className="flex-1 flex items-center justify-center p-8 bg-white">
         <div className="w-full max-w-sm">
 
-          {/* Mobile logo */}
-          <div className="lg:hidden mb-8 flex items-center gap-3">
-            <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">XC</span>
-            </div>
-            <span className="font-headline text-xl uppercase text-gray-900">Xperience Champions</span>
+          {/* Logo móvil */}
+          <div className="lg:hidden mb-8">
+            <Image src="/logo-xc.svg" alt="Xperience Champion" width={120} height={121} />
           </div>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-1">Crear cuenta</h2>
+          <h2 className="font-headline text-3xl uppercase text-gray-900 mb-1">Crear cuenta</h2>
           <p className="text-gray-400 text-sm mb-8">Solo para vendedores MediaMarkt Saturn</p>
 
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -129,7 +130,7 @@ export default function RegisterPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-red-600 hover:bg-red-700 disabled:opacity-50 text-white font-bold py-3 rounded-lg transition-colors text-sm uppercase tracking-wide mt-2"
+              className="w-full bg-red-600 hover:bg-red-700 disabled:opacity-50 text-white font-bold py-3 rounded-lg transition-colors text-sm uppercase tracking-wide"
             >
               {loading ? 'Creando cuenta...' : 'Crear cuenta'}
             </button>
