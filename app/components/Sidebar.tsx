@@ -21,12 +21,12 @@ export default function Sidebar({ nombre, role, items }: Props) {
     <aside className="w-64 min-h-screen bg-black flex flex-col">
 
       {/* Logo en contenedor blanco */}
-      <div className="bg-white p-5">
+      <div className="bg-white p-6">
         <Image
           src="/logo-xc.svg"
           alt="Xperience Champion"
-          width={200}
-          height={202}
+          width={220}
+          height={222}
           className="w-full h-auto"
           priority
         />
@@ -60,8 +60,8 @@ export default function Sidebar({ nombre, role, items }: Props) {
         <Image
           src="/logo-mediamarkt-saturn.svg"
           alt="MediaMarkt Saturn"
-          width={160}
-          height={32}
+          width={200}
+          height={40}
           className="w-full h-auto opacity-70"
         />
       </div>

@@ -26,12 +26,12 @@ export default function LoginPage() {
 
       {/* Panel izquierdo — marca */}
       <div className="hidden lg:flex lg:w-5/12 bg-red-600 flex-col justify-between p-10">
-        <div className="bg-white rounded-xl p-6 w-fit">
+        <div className="bg-white p-6 w-fit">
           <Image
             src="/logo-xc.svg"
             alt="Xperience Champion"
-            width={180}
-            height={182}
+            width={220}
+            height={222}
             priority
           />
         </div>
@@ -43,8 +43,8 @@ export default function LoginPage() {
         <Image
           src="/logo-mediamarkt-saturn.svg"
           alt="MediaMarkt Saturn"
-          width={180}
-          height={36}
+          width={220}
+          height={44}
           className="opacity-80"
         />
       </div>
