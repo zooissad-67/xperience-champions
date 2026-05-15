@@ -39,7 +39,7 @@ export default async function ManagerRankingsPage() {
   return (
     <div className="max-w-3xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">Ranking de vendedores</h1>
+        <h1 className="font-headline text-3xl uppercase text-gray-900">Ranking de vendedores</h1>
         <p className="text-gray-500 text-sm mt-1">{store?.nombre}</p>
       </div>
 

@@ -32,7 +32,7 @@ export default async function AdminPage() {
   return (
     <div className="max-w-5xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
+        <h1 className="font-headline text-3xl uppercase text-gray-900">Dashboard</h1>
         <p className="text-gray-500 text-sm mt-1">Vista global del programa Xperience Champions</p>
       </div>
 

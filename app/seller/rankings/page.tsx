@@ -36,7 +36,7 @@ export default async function SellerRankingsPage() {
   return (
     <div className="max-w-3xl mx-auto space-y-8">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">Rankings</h1>
+        <h1 className="font-headline text-3xl uppercase text-gray-900">Rankings</h1>
         <p className="text-gray-500 text-sm mt-1">{store?.nombre}</p>
       </div>
 

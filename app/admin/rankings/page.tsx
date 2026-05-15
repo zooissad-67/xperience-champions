@@ -48,7 +48,7 @@ export default async function AdminRankingsPage() {
   return (
     <div className="max-w-4xl mx-auto space-y-8">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">Rankings</h1>
+        <h1 className="font-headline text-3xl uppercase text-gray-900">Rankings</h1>
         <p className="text-gray-500 text-sm mt-1">Clasificación global del programa</p>
       </div>
 

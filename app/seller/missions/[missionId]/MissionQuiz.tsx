@@ -50,7 +50,7 @@ function ResultsScreen({ missionName, questions, attempts }: {
   return (
     <div className="max-w-2xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">{missionName}</h1>
+        <h1 className="font-headline text-3xl uppercase text-gray-900">{missionName}</h1>
         <p className="text-gray-500 text-sm mt-1">Misión completada</p>
       </div>
 
@@ -157,7 +157,7 @@ export default function MissionQuiz({ mission, questions, previousAttempts }: Pr
     <div className="max-w-2xl mx-auto">
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
-          <h1 className="text-xl font-bold text-gray-900">{mission.nombre}</h1>
+          <h1 className="font-headline text-2xl uppercase text-gray-900">{mission.nombre}</h1>
           <span className="text-sm text-gray-400">{answeredCount} / {questions.length}</span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-1.5">

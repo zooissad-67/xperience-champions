@@ -45,7 +45,7 @@ export default async function SellerResultsPage() {
   return (
     <div className="max-w-2xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">Mis resultados</h1>
+        <h1 className="font-headline text-3xl uppercase text-gray-900">Mis resultados</h1>
         <p className="text-gray-500 text-sm mt-1">Xperience Champions FY26/27</p>
       </div>
 
