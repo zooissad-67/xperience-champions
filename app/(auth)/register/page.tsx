@@ -25,7 +25,7 @@ export default function RegisterPage() {
     <div className="min-h-screen flex">
 
       {/* Panel izquierdo — marca */}
-      <div className="hidden lg:flex lg:w-5/12 bg-black flex-col justify-between p-10">
+      <div className="hidden lg:flex lg:w-5/12 bg-red-600 flex-col justify-between p-10">
         <div className="bg-white p-6 w-fit">
           <Image
             src="/logo-xc.svg"
@@ -37,11 +37,10 @@ export default function RegisterPage() {
         </div>
 
         <div>
-          <div className="w-10 h-1 bg-red-600 mb-5" />
           <p className="font-headline text-white text-4xl uppercase leading-tight">
             Únete al<br />programa
           </p>
-          <p className="text-gray-500 text-sm mt-4 leading-relaxed max-w-xs">
+          <p className="text-white/60 text-sm mt-4 leading-relaxed max-w-xs">
             Regístrate para acceder a las misiones de formación y demostrar tu nivel como Xperience Champion.
           </p>
         </div>
@@ -51,7 +50,7 @@ export default function RegisterPage() {
           alt="MediaMarkt Saturn"
           width={220}
           height={44}
-          className="opacity-50"
+          className="opacity-80"
         />
       </div>
 
