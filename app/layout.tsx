@@ -3,16 +3,16 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const mmHeadline = localFont({
-  src: "../public/fonts/MMHeadlineProWebTT-Regular_subset.woff2",
+  src: "./fonts/MMHeadlineProWebTT-Regular_subset.woff2",
   variable: "--font-mm",
   display: "swap",
 });
 
 const notoSans = localFont({
   src: [
-    { path: "../public/fonts/noto-sans-display-v10-latin-400.woff2", weight: "400" },
-    { path: "../public/fonts/noto-sans-display-v10-latin-600.woff2", weight: "600" },
-    { path: "../public/fonts/noto-sans-display-v10-latin-700.woff2", weight: "700" },
+    { path: "./fonts/noto-sans-display-v10-latin-400.woff2", weight: "400" },
+    { path: "./fonts/noto-sans-display-v10-latin-600.woff2", weight: "600" },
+    { path: "./fonts/noto-sans-display-v10-latin-700.woff2", weight: "700" },
   ],
   variable: "--font-noto",
   display: "swap",
