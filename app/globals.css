@@ -49,8 +49,10 @@
   --color-red-50:  #fff0f0;
   --color-red-100: #ffe0e0;
 
-  --font-headline: 'MMHeadlinePro', Impact, Arial Narrow, sans-serif;
+  --font-headline: 'MMHeadlinePro', Impact, 'Arial Narrow', sans-serif;
   --font-sans: 'NotoSansDisplay', Arial, Helvetica, sans-serif;
+  --font-family-headline: 'MMHeadlinePro', Impact, 'Arial Narrow', sans-serif;
+  --font-family-body: 'NotoSansDisplay', Arial, Helvetica, sans-serif;
 }
 
 /* ── Base ─────────────────────────────────────────────────── */
@@ -58,7 +60,7 @@
 body {
   background: #ffffff;
   color: #111111;
-  font-family: var(--font-sans);
+  font-family: 'NotoSansDisplay', Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -72,6 +74,5 @@ body {
 /* ── Utility ──────────────────────────────────────────────── */
 
 .font-headline {
-  font-family: var(--font-headline);
-  font-style: italic;
+  font-family: 'MMHeadlinePro', Impact, 'Arial Narrow', sans-serif !important;
 }
