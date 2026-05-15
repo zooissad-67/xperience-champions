@@ -26,13 +26,12 @@ export default function LoginPage() {
 
       {/* Panel izquierdo — marca */}
       <div className="hidden lg:flex lg:w-5/12 bg-red-600 flex-col justify-between p-10">
-        <div className="bg-white p-6">
+        <div className="bg-white p-6 w-fit">
           <Image
             src="/logo-xc.svg"
             alt="Xperience Champion"
             width={220}
             height={222}
-            className="w-full h-auto max-w-[220px]"
             priority
           />
         </div>
