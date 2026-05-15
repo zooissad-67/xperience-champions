@@ -60,7 +60,7 @@ export default function LoginPage() {
           <div>
 
             <h2 className="font-headline text-3xl uppercase text-gray-900 mb-1">Iniciar sesión</h2>
-            <p className="text-gray-400 text-sm mb-8">Introduce tus datos para continuar</p>
+            <p className="text-gray-500 text-sm mb-8">Introduce tus datos para continuar</p>
 
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
