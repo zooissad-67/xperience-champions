@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Noto_Sans_Display } from "next/font/google";
 import "./globals.css";
 
 const mmHeadline = localFont({
@@ -8,12 +9,9 @@ const mmHeadline = localFont({
   display: "swap",
 });
 
-const notoSans = localFont({
-  src: [
-    { path: "./fonts/noto-sans-display-v10-latin-400.woff2", weight: "400" },
-    { path: "./fonts/noto-sans-display-v10-latin-600.woff2", weight: "600" },
-    { path: "./fonts/noto-sans-display-v10-latin-700.woff2", weight: "700" },
-  ],
+const notoSans = Noto_Sans_Display({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
   variable: "--font-noto",
   display: "swap",
 });
