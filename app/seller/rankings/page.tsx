@@ -18,19 +18,19 @@ export default async function SellerRankingsPage() {
     supabase.from('stores').select('nombre').eq('id', userData!.store_id).single(),
   ])
 
-  const sellerRows = (storeRanking ?? []).map((r: { nombre: string; correctas: number; total: number }, i: number) => ({
+  const sellerRows = (storeRanking ?? []).map((r: { user_id: string; nombre: string; correctas: number; total: number }) => ({
     nombre: r.nombre,
     correctas: Number(r.correctas),
     total: Number(r.total),
-    highlight: r.nombre === userData?.nombre,
+    highlight: r.user_id === user!.id,
   }))
 
-  const storeRows = (storesRanking ?? []).map((r: { store_nombre: string; ciudad: string; correctas: number; total: number }) => ({
+  const storeRows = (storesRanking ?? []).map((r: { store_id: string; store_nombre: string; ciudad: string; correctas: number; total: number }) => ({
     nombre: r.store_nombre,
     sub: r.ciudad,
     correctas: Number(r.correctas),
     total: Number(r.total),
-    highlight: r.store_nombre === store?.nombre,
+    highlight: r.store_id === userData?.store_id,
   }))
 
   return (

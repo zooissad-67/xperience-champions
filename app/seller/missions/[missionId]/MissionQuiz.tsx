@@ -103,6 +103,7 @@ export default function MissionQuiz({ mission, questions, previousAttempts }: Pr
   })
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
   const [submitted, setSubmitted] = useState(false)
+  const [saveError, setSaveError] = useState<string | null>(null)
   const [isPending, startTransition] = useTransition()
 
   const allAnsweredMap = new Map<string, { respuesta: string; correcto: boolean }>([
@@ -127,8 +128,14 @@ export default function MissionQuiz({ mission, questions, previousAttempts }: Pr
     if (submitted || isPending) return
     const correcto = option === currentQuestion.respuesta_correcta
     setSelectedAnswer(option)
+    setSaveError(null)
     startTransition(async () => {
-      await saveAttempt(currentQuestion.id, option, correcto)
+      const { error } = await saveAttempt(currentQuestion.id, option, correcto)
+      if (error) {
+        setSaveError('No se pudo guardar la respuesta. Por favor, inténtalo de nuevo.')
+        setSelectedAnswer(null)
+        return
+      }
       setLocalAnswers((prev) => new Map(prev).set(currentQuestion.id, { respuesta: option, correcto }))
       setSubmitted(true)
     })
@@ -196,6 +203,12 @@ export default function MissionQuiz({ mission, questions, previousAttempts }: Pr
             )
           })}
         </div>
+
+        {saveError && (
+          <div className="mt-5 px-4 py-3 rounded-lg text-sm font-medium bg-yellow-50 text-yellow-800">
+            {saveError}
+          </div>
+        )}
 
         {submitted && (
           <div className={`mt-5 px-4 py-3 rounded-lg text-sm font-medium ${

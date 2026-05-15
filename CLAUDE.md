@@ -40,8 +40,8 @@ Contenido dividido en misiones temáticas activables periódicamente:
 - [x] Repositorio en GitHub
 - [x] Supabase configurado
 - [x] Autenticación implementada
-- [ ] Misiones y preguntas
-- [ ] Rankings
+- [x] Misiones y preguntas
+- [x] Rankings
 - [x] Panel de administrador
 - [x] Panel de responsable de tienda
 - [ ] Deploy en Vercel
