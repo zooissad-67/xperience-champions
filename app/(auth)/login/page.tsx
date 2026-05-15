@@ -30,9 +30,9 @@ export default function LoginPage() {
           <Image
             src="/logo-xc.svg"
             alt="Xperience Champion"
-            width={300}
-            height={303}
-            className="w-full h-auto"
+            width={220}
+            height={222}
+            className="w-full h-auto max-w-[220px]"
             priority
           />
         </div>
@@ -44,8 +44,8 @@ export default function LoginPage() {
         <Image
           src="/logo-mediamarkt-saturn.svg"
           alt="MediaMarkt Saturn"
-          width={240}
-          height={48}
+          width={180}
+          height={36}
         />
       </div>
 
@@ -54,7 +54,7 @@ export default function LoginPage() {
 
         {/* Logo móvil — centrado arriba */}
         <div className="lg:hidden flex justify-center pt-10 pb-6 px-8">
-          <Image src="/logo-xc.svg" alt="Xperience Champion" width={220} height={222} priority />
+          <Image src="/logo-xc.svg" alt="Xperience Champion" width={160} height={162} priority />
         </div>
 
         <div className="flex-1 flex items-center justify-center p-8">
@@ -130,7 +130,7 @@ export default function LoginPage() {
 
         {/* Logo MediaMarkt móvil — anclado abajo */}
         <div className="lg:hidden flex justify-center pb-8 px-8">
-          <Image src="/logo-mediamarkt-saturn.svg" alt="MediaMarkt Saturn" width={200} height={40} />
+          <Image src="/logo-mediamarkt-saturn.svg" alt="MediaMarkt Saturn" width={160} height={32} />
         </div>
 
       </div>
