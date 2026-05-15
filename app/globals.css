@@ -1,46 +1,12 @@
 @import "tailwindcss";
 
-/* ── Custom fonts ─────────────────────────────────────────── */
-
-@font-face {
-  font-family: 'MMHeadlinePro';
-  src: url('/fonts/MMHeadlineProWebTT-Regular_subset.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'NotoSansDisplay';
-  src: url('/fonts/noto-sans-display-v10-latin-400.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'NotoSansDisplay';
-  src: url('/fonts/noto-sans-display-v10-latin-600.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'NotoSansDisplay';
-  src: url('/fonts/noto-sans-display-v10-latin-700.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* ── Theme ────────────────────────────────────────────────── */
 
 @theme inline {
   --color-background: #ffffff;
   --color-foreground: #111111;
 
-  /* Override Tailwind reds with MediaMarkt red */
+  /* MediaMarkt red */
   --color-red-400: #e84040;
   --color-red-500: #e00000;
   --color-red-600: #cc0000;
@@ -48,11 +14,6 @@
   --color-red-800: #800000;
   --color-red-50:  #fff0f0;
   --color-red-100: #ffe0e0;
-
-  --font-headline: 'MMHeadlinePro', Impact, 'Arial Narrow', sans-serif;
-  --font-sans: 'NotoSansDisplay', Arial, Helvetica, sans-serif;
-  --font-family-headline: 'MMHeadlinePro', Impact, 'Arial Narrow', sans-serif;
-  --font-family-body: 'NotoSansDisplay', Arial, Helvetica, sans-serif;
 }
 
 /* ── Base ─────────────────────────────────────────────────── */
@@ -60,19 +21,17 @@
 body {
   background: #ffffff;
   color: #111111;
-  font-family: 'NotoSansDisplay', Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Prevent dark mode from inverting the app */
+/* Prevent dark mode */
 @media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: light;
-  }
+  :root { color-scheme: light; }
 }
 
 /* ── Utility ──────────────────────────────────────────────── */
 
 .font-headline {
-  font-family: 'MMHeadlinePro', Impact, 'Arial Narrow', sans-serif !important;
+  font-family: var(--font-headline), Impact, 'Arial Narrow', sans-serif;
 }
