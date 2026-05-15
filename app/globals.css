@@ -73,4 +73,5 @@ body {
 
 .font-headline {
   font-family: var(--font-headline);
+  font-style: italic;
 }
