@@ -49,15 +49,15 @@ export default function LoginPage() {
       </div>
 
       {/* Panel derecho — formulario */}
-      <div className="flex-1 flex flex-col bg-white">
+      <div className="flex-1 flex items-center justify-center p-8 bg-white">
+        <div className="w-full max-w-sm">
 
-        {/* Logo móvil — centrado arriba */}
-        <div className="lg:hidden flex justify-center pt-10 pb-6 px-8">
-          <Image src="/logo-xc.svg" alt="Xperience Champion" width={160} height={162} priority />
-        </div>
+          {/* Logo móvil */}
+          <div className="lg:hidden mb-8">
+            <Image src="/logo-xc.svg" alt="Xperience Champion" width={120} height={121} priority />
+          </div>
 
-        <div className="flex-1 flex items-center justify-center p-8">
-          <div className="w-full max-w-sm">
+          <div>
 
             <h2 className="font-headline text-3xl uppercase text-gray-900 mb-1">Iniciar sesión</h2>
             <p className="text-gray-400 text-sm mb-8">Introduce tus datos para continuar</p>
@@ -126,12 +126,6 @@ export default function LoginPage() {
 
           </div>
         </div>
-
-        {/* Logo MediaMarkt móvil — anclado abajo */}
-        <div className="lg:hidden flex justify-center pb-8 px-8">
-          <Image src="/logo-mediamarkt-saturn.svg" alt="MediaMarkt Saturn" width={160} height={32} />
-        </div>
-
       </div>
     </div>
   )
