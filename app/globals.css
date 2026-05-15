@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ── Custom fonts ─────────────────────────────────────────── */
+
+@font-face {
+  font-family: 'MMHeadlinePro';
+  src: url('/fonts/MMHeadlineProWebTT-Regular_subset.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: 'NotoSansDisplay';
+  src: url('/fonts/noto-sans-display-v10-latin-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NotoSansDisplay';
+  src: url('/fonts/noto-sans-display-v10-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NotoSansDisplay';
+  src: url('/fonts/noto-sans-display-v10-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Theme ────────────────────────────────────────────────── */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #ffffff;
+  --color-foreground: #111111;
+
+  /* Override Tailwind reds with MediaMarkt red */
+  --color-red-400: #e84040;
+  --color-red-500: #e00000;
+  --color-red-600: #cc0000;
+  --color-red-700: #a30000;
+  --color-red-800: #800000;
+  --color-red-50:  #fff0f0;
+  --color-red-100: #ffe0e0;
+
+  --font-headline: 'MMHeadlinePro', Impact, Arial Narrow, sans-serif;
+  --font-sans: 'NotoSansDisplay', Arial, Helvetica, sans-serif;
 }
 
+/* ── Base ─────────────────────────────────────────────────── */
+
+body {
+  background: #ffffff;
+  color: #111111;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Prevent dark mode from inverting the app */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: light;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ── Utility ──────────────────────────────────────────────── */
+
+.font-headline {
+  font-family: var(--font-headline);
 }
