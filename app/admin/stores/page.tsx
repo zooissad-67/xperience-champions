@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase-server'
+import NewStoreForm from './NewStoreForm'
 
 export default async function AdminStoresPage() {
   const supabase = await createClient()
@@ -20,9 +21,12 @@ export default async function AdminStoresPage() {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <div className="mb-8">
-        <h1 className="font-headline text-3xl uppercase text-gray-900">Tiendas</h1>
-        <p className="text-gray-500 text-sm mt-1">{stores?.length ?? 0} tiendas registradas</p>
+      <div className="flex items-center justify-between mb-8">
+        <div>
+          <h1 className="font-headline text-3xl uppercase text-gray-900">Tiendas</h1>
+          <p className="text-gray-500 text-sm mt-1">{stores?.length ?? 0} tiendas registradas</p>
+        </div>
+        <NewStoreForm />
       </div>
 
       <div className="bg-white rounded-xl border border-gray-200">
@@ -31,7 +35,7 @@ export default async function AdminStoresPage() {
             <tr className="border-b border-gray-100">
               <th className="text-left px-6 py-3 text-gray-500 font-medium">Tienda</th>
               <th className="text-left px-6 py-3 text-gray-500 font-medium">Ciudad</th>
-              <th className="text-left px-6 py-3 text-gray-500 font-medium">ID</th>
+              <th className="text-left px-6 py-3 text-gray-500 font-medium">ID de tienda</th>
               <th className="text-right px-6 py-3 text-gray-500 font-medium">Vendedores</th>
             </tr>
           </thead>
