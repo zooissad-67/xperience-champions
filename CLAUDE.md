@@ -44,10 +44,15 @@ Contenido dividido en misiones temáticas activables periódicamente:
 - [x] Rankings
 - [x] Panel de administrador
 - [x] Panel de responsable de tienda
-- [ ] Deploy en Vercel
+- [x] Deploy en Vercel
 
 ## Idioma
 Por definir (inglés o español)
 
 ## Repositorio
 https://github.com/zooissad-67/xperience-champions
+
+## Producción
+- URL: https://xperience.mostazacomunicacion.com
+- Hosting: Vercel (deploy automático en cada push a `main`)
+- Supabase: plan Free (se pausa tras ~7 días sin tráfico; resumir desde el dashboard)
